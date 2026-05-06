@@ -19,4 +19,8 @@ public:
     static int getCount();
 
     friend String operator*(const String& s1, const String& s2);
+
+    char& operator[](int index);
+    int operator()(char c);
+    operator int();
 };

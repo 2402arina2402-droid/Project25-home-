@@ -67,7 +67,7 @@ String operator*(const String& s1, const String& s2) {
 	int k = 0;
 
 	for (int i = 0; s1.str[i] != '\0'; i++) {
-		for (int j = 0; s2.str[i] != '\0'; i++) {
+		for (int j = 0; s2.str[j] != '\0'; i++) {
 			if (s1.str[i] == s2.str[j]) {
 				bool exist = false;
 				for (int t = 0; t < k; t++) {
@@ -89,3 +89,26 @@ String operator*(const String& s1, const String& s2) {
 
 	return result;
 }
+
+char& String::operator[](int index) {
+	return str[index];
+}
+
+int String::operator()(char c) {
+	for (int i = 0; i < size; i++) {
+		if (str[i] = c) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+String::operator int() {
+	int len = 0;
+
+	while (str[len] != '\0') {
+		len++;
+	}
+	return len;
+}
+

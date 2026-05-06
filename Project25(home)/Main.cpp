@@ -30,4 +30,28 @@ int main() {
 	cout << "Intersection of first and second strings: " << endl;
 	String s5 = s1 * s2;
 	s5.output();
+
+	int index;
+
+	cout << "Enter index: ";
+	cin >> index;
+
+	if (index >= 0 && index < (int)s1) {
+		cout << "Symbol: " << s1[index] << endl;
+	}
+	else {
+		cout << "Wrong index";
+	}
+
+	int index = s1('a');
+
+	if (index != -1) {
+		cout << "Found at index: " << index;
+	}
+	else {
+		cout << "Not found";
+	}
+
+	int length = s1;
+	cout << "Length of s1 : " << length << endl;
 }
